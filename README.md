@@ -31,6 +31,8 @@ Provides tools that allow an LLM to search, retrieve, upload, and manage documen
 | `update_document_meta` | Update a key/value pair in sidecar metadata |
 | `get_document_bibtex` | Export BibTeX citation data for a paper |
 | `move_document` | Move a document to a new location within the database |
+| `attach_file` | Attach a physical file to a reference-only entry (converts to `source_type='file'`) |
+| `detach_file` | Detach the physical file from a document (converts to `source_type='reference'`) |
 
 ### Upload
 
