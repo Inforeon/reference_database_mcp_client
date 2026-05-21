@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reference-database-mcp"
+version = "0.1.0"
+description = "MCP server wrapper for the reference database (docsearch) REST API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "fastmcp",
+    "mcp[cli]>=1.6.0",
+    "httpx>=0.28.1",
+]
+
+[project.urls]
+Repository = "https://github.com/your-org/reference-database-mcp"
+
+[project.scripts]
+reference-database-mcp = "reference_database_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["reference_database_mcp"]
